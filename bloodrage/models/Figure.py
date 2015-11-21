@@ -1,3 +1,11 @@
+#!/usr/bin/env python
+
+#
+#   Author: Michael E Sanders
+#
+# Might need more information for a figure; however for now the following in the blocks below should be
+# ample enough description to get started.
+
 # A figure is a "model" or piece that a player has in reserve.
 # Figures have a STR rating { Which usually equals what their cost is to play }
 # FIgures have a Cost of rage to play: Leaders are Free, Warriors cost one and Ships cost two.
@@ -8,9 +16,6 @@ from bloodrage.models.Config import FigureType, ClanTypes
 
 class Figure:
     def __init__(self, type, str, cost, clan, terrain):
-        assert(type > 0 and type < 6)
-        assert(terrain == 1 or terrain == 2)
-        assert(clan > 0 and clan < 5)
         self._type = type
         self._str = str
         self._cost = cost

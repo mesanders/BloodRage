@@ -1,3 +1,14 @@
+#!/usr/bin/env python
+
+#
+#   Author: Michael E Sanders
+#
+# The following three classes are essentially ENUMs with toString methods.
+# FigureType is the Type of Figure it is, this might be useful for upgrades.
+# As the time of this writing not sure how the Upgrades will be applied, because
+# The player can have a Leader upgrade. Not sure which entity should handle the upgrade at this point
+# But I want to at least have a trail of my thought process. Cheers!
+
 class FigureType:
     LEADER = 1
     SHIP = 2

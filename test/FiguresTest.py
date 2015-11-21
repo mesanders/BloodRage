@@ -1,4 +1,13 @@
+#!/usr/bin/env python
+
+#
+#   Author: Michael E Sanders
+#
+
+
+
 from bloodrage.models import Figure, ClanTypes, TerrainType,FigureType
+
 def testFigures():
     leader = Figure(FigureType.LEADER, 3, 0, ClanTypes.WOLF, TerrainType.LAND)
     assert(leader._type == FigureType.LEADER)
@@ -8,5 +17,6 @@ def testFigures():
     assert(leader._terrain == TerrainType.LAND)
 
     print(leader)
+
 
 testFigures()
