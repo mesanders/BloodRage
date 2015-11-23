@@ -31,6 +31,7 @@ class ClanSheet(object):
         self._warrior_upgrade = None
         self._ship_upgrade = None
         self._clan_upgrade = []
+        self._quests = []
         self._monster_upgrade = []
         self._clan = clan
         self._current_rage = 6
@@ -56,6 +57,10 @@ class ClanSheet(object):
             self._current_horns_slot += 1
             return True
         return False
+
+    def revealQuests(self):
+        # *TODO NEED STORE AND PROCESS QUEST CARDS
+        pass
 
     def getEndGlory(self):
         return  self._getEndGlory(self._current_horns_slot) \
