@@ -40,8 +40,8 @@ class ClanSheet(object):
 
 
     def upgrade_rage(self):
-        if self._current_rage < 6:
-            self._current_rage += 1
+        if self._current_rage_slot < 6:
+            self._current_rage_slot += 1
             return True
         return False
 
@@ -56,5 +56,17 @@ class ClanSheet(object):
             self._current_horns_slot += 1
             return True
         return False
+
+    def getEndGlory(self):
+        return  self._getEndGlory(self._current_horns_slot) \
+                + self._getEndGlory(self._current_rage_slot) + self._getEndGlory(self._current_axes_slot)
+
+    def _getEndGlory(self, slot):
+        if slot == 4 or slot == 5:
+            return 10
+        elif slot == 6:
+            return 20
+        else:
+            return 0
 
 
